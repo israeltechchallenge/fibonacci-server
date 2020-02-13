@@ -15,22 +15,22 @@ This is a Fibonacci server, implement in Node.js
 
 ## Installation
 
-Clone the repo
+Clone the repo (all commands are in the terminal in linux/mac or cmd in windows)
 
 ```bash
-clone https://github.com/yonathan06/ITC-fibonacci-server.git
+> clone https://github.com/yonathan06/ITC-fibonacci-server.git
 ```
 
 Then enter to the created folder
 
 ```bash
-cd ITC-fibonacci-server
+> cd ITC-fibonacci-server
 ```
 
 Install the required dependencies with npm (make sure you have [Node.js](https://nodejs.org/) installed, npm comes with that)
 
 ```bash
-npm install
+> npm install
 ```
 
 ## Running The Server Locally
@@ -38,7 +38,7 @@ npm install
 Then you can run the server
 
 ```bash
-node app.js
+> node app.js
 ```
 
 You should see something like this:
