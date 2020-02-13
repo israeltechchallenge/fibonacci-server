@@ -1,3 +1,5 @@
+
+```bash
  ___  _________  ________     
 |\  \|\___   ___\\   ____\    
 \ \  \|___ \  \_\ \  \___|    
@@ -5,8 +7,8 @@
   \ \  \   \ \  \ \ \  \____  
    \ \__\   \ \__\ \ \_______\
     \|__|    \|__|  \|_______|
-                              
-                              
+```
+
 # Fibonacci Server
 
 This is a Fibonacci server, implement in Node.js
@@ -14,6 +16,7 @@ This is a Fibonacci server, implement in Node.js
 ## Installation
 
 Clone the repo
+
 ```bash
 clone https://github.com/yonathan06/ITC-fibonacci-server.git
 ```
@@ -33,16 +36,18 @@ npm install
 ## Running The Server Locally
 
 Then you can run the server
+
 ```bash
 node app.js
 ```
 
 You should see something like this:
+
 ```bash
 App listening on port 5050
 Press Ctrl+C to quit.
 ```
 
-
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
