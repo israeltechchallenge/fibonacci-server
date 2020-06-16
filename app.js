@@ -8,11 +8,15 @@ const Datastore = require('nedb');
 const db = new Datastore({ filename: './storage.db' });
 db.loadDatabase();
 
-function fibonacci(n) {
-  if (n < 2) {
-    return n;
+function fibonacci(n, memo) {
+  memo = memo || {};
+  if (n in memo) {
+    return memo[n];
   }
-  return fibonacci(n - 1) + fibonacci(n - 2);
+  if (n <= 1) {
+    return 1;
+  }
+  return (memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo));
 }
 
 function wait(time) {
@@ -44,7 +48,7 @@ app.get('/fibonacci/:number', async (req, res) => {
   });
 });
 
-app.get('/getFibonacciResults', async (req, res) => {
+app.get("/getFibonacciResults", async (req, res) => {
   await wait(600);
   db.find({}, (err, docs) => {
     if (err) {
@@ -52,11 +56,11 @@ app.get('/getFibonacciResults', async (req, res) => {
     } else {
       res.send({ results: docs });
     }
-  })
+  });
 });
 
 const PORT = 5050;
 app.listen(5050, () => {
   console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+  console.log("Press Ctrl+C to quit.");
 });
