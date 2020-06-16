@@ -1,15 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 
 app.use(cors());
 
-const Datastore = require('nedb');
-const db = new Datastore({ filename: './storage.db' });
+const Datastore = require("nedb");
+const db = new Datastore({ filename: "./storage.db" });
 db.loadDatabase();
 
-function fibonacci(n, memo) {
-  memo = memo || {};
+function fibonacci(n, memo = {}) {
   if (n in memo) {
     return memo[n];
   }
@@ -22,14 +21,14 @@ function fibonacci(n, memo) {
 function wait(time) {
   return new Promise((resolve) => {
     setTimeout(resolve, time);
-  })
+  });
 }
 
-app.get('/fibonacci/:number', async (req, res) => {
+app.get("/fibonacci/:number", async (req, res) => {
   await wait(600);
   const number = +req.params.number;
   if (number === 42) {
-    return res.status(400).send('42 is the meaning of life');
+    return res.status(400).send("42 is the meaning of life");
   }
   if (number > 50) {
     return res.status(400).send("number can't be bigger than 50");
