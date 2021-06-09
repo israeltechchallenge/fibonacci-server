@@ -18,7 +18,7 @@ This is a Fibonacci server, implement in Node.js
 Clone the repo (all commands are in the terminal in linux/mac or cmd in windows)
 
 ```bash
-> git clone https://github.com/yonathan06/ITC-fibonacci-server.git
+> git clone https://github.com/israeltechchallenge/fibonacci-server
 ```
 
 Then enter to the created folder
