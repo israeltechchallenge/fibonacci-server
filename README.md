@@ -24,7 +24,7 @@ Clone the repo (all commands are in the terminal in linux/mac or cmd in windows)
 Then enter to the created folder
 
 ```bash
-> cd ITC-fibonacci-server
+> cd fibonacci-server
 ```
 
 Install the required dependencies with npm (make sure you have [Node.js](https://nodejs.org/) installed, npm comes with that)
